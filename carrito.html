@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Help Me Clothes</title>
+    <link rel="stylesheet" href="css/carrito.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Tu carrito</h1>
+        <a href="estilos.html" class="back-btn">⬅ Seguir comprando</a>
+    </header>
+
+    <section class="cart-container">
+        <div id="cartItems"></div>
+
+        <div class="cart-summary">
+            <h3>Total a pagar:</h3>
+            <p id="totalPrice" class="total-price">S/ 0.00</p>
+            <button class="checkout-btn">Continuar compra</button>
+        </div>
+    </section>
+
+    <div id="toast" class="toast">Producto eliminado</div>
+
+    <div id="purchasePopup" class="popup">
+        <div class="popup-content">
+            <h2>¡Gracias por su compra!</h2>
+            <p>Su pedido está en camino</p>
+            <button onclick="closePurchasePopup()" class="close-popup-btn">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- ==== MODAL DE MÉTODO DE PAGO ==== -->
+    <div id="paymentModal" class="popup">
+        <div class="popup-content payment-box">
+            <h2>Método de Pago</h2>
+
+            <label class="label">Seleccione un método</label>
+            <select id="paymentMethod" class="input">
+                <option value="debito">Tarjeta de Débito</option>
+                <option value="credito">Tarjeta de Crédito</option>
+                <option value="yape">Yape</option>
+            </select>
+
+            <form id="paymentForm">
+
+                <!-- === CAMPOS TARJETA === -->
+                <div id="cardFields">
+                    <label class="label">Número de tarjeta</label>
+                    <input type="text" id="cardNumber" class="input" maxlength="16" inputmode="numeric">
+
+                    <label class="label">Nombre en tarjeta</label>
+                    <input type="text" id="cardName" class="input">
+
+                    <label class="label">Fecha de expiración (MM/AA)</label>
+                    <input type="text" id="cardDate" class="input" maxlength="5" placeholder="MM/AA">
+
+                    <label class="label">CVV</label>
+                    <input type="password" id="cardCVV" class="input" maxlength="3" inputmode="numeric">
+
+                    <!-- SOLO PARA CRÉDITO -->
+                    <div id="creditCuotas" style="display:none;">
+                        <label class="label">Seleccionar cuotas</label>
+                        <select id="cuotas" class="input">
+                            <option value="1">1 cuota</option>
+                            <option value="3">3 cuotas</option>
+                            <option value="6">6 cuotas</option>
+                            <option value="12">12 cuotas</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- === CAMPOS YAPE === -->
+                <div id="yapeFields" style="display:none;">
+                    <label class="label">Número de Yape</label>
+                    <input type="text" id="yapeNumber" class="input" maxlength="9" inputmode="numeric">
+
+                    <label class="label">Código de confirmación</label>
+                    <input type="text" id="yapeCode" class="input" maxlength="6" inputmode="numeric">
+
+                    <p class="yape-info">En tu cuenta de yape puedes encontrar la opción de código de confirmación.</p>
+                </div>
+
+                <div class="btns-flex">
+                    <button type="button" id="cancelPayment" class="cancel-btn">Cancelar</button>
+                    <button type="submit" class="checkout-btn pay-btn">Pagar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==== POPUP REQUIERE LOGIN ==== -->
+    <div id="loginRequiredPopup" class="popup">
+        <div class="popup-content">
+            <h2>Inicia sesión para continuar</h2>
+            <p>Para completar tu compra, primero debes iniciar sesión.</p>
+            <button id="goLoginBtn" class="checkout-btn" style="background:#ff80b3;">
+                Aceptar
+            </button>
+        </div>
+    </div>
+
+    <script src="js/carrito.js"></script>
+</body>
+
+</html>

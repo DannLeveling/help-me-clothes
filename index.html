@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HELP ME CLOTHES - Conectamos tu ropa con el mundo</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header id="header">
+    <nav>
+      <div class="logo">
+        <img src="img/logo/App - Experiencia del usuario .png" class="logo" alt="Tienda">
+        <span>HELP ME CLOTHES</span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"><img src="img/iconos/inicio.svg" alt="Inicio" class="icono-nav"><span>Inicio</span></a></li>
+        <li><a href="estilos.html"><img src="img/iconos/estilos.svg" alt="Estilos"
+              class="icono-nav"><span>Estilos</span></a></li>
+        <li><a href="#mission"><img src="img/iconos/mision.svg" alt="Mision" class="icono-nav"><span>Misión</span></a>
+        </li>
+        <li><a href="#services"><img src="img/iconos/servicios.svg" alt="Servicios"
+              class="icono-nav"><span>Servicios</span></a></li>
+        <li><a href="#stores"><img src="img/iconos/shop-window.svg" alt="Tiendas"
+              class="icono-nav"><span>Tiendas</span></a></li>
+        <li><a href="closet.html"><img src="img/iconos/closet.svg" alt="Closet"
+              class="icono-nav"><span>Closet</span></a></li>
+        <li class="user-menu">
+          <a id="userBtn" href="login.html">
+            <img src="img/iconos/login.svg" alt="Usuario" class="icono-nav">
+            <span>Usuario</span>
+          </a>
+          <ul id="userDropdown" class="user-dropdown">
+            <li onclick="logout()">Cerrar sesión</li>
+          </ul>
+        </li>
+
+      </ul>
+      <button class="cart-btn" onclick="goToCart()">
+        <img src="img/iconos/carrito.svg" alt="Carrito" class="icono-cart">
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+
+
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-text fade-in">
+        <h1>Te ayudamos con tu estilo</h1>
+        <p>Gracias a la tecnología vestir bien dejará de ser un problema...</p>
+        <div class="hero-buttons">
+          <button class="btn-primary">Descargar</button>
+          <button class="btn-secondary">+ Agregar sección</button>
+        </div>
+      </div>
+      <div class="hero-image slide-in-right">
+        <img src="img/ropa/Polo.jpg" class="clothing-item" alt="Polo">
+        <img src="img/ropa/Vestido.jpg" class="clothing-item" alt="Vestido">
+        <img src="img/ropa/Camisa.jpg" class="clothing-item" alt="Camisa">
+        <img src="img/ropa/Abrigo.jpg" class="clothing-item" alt="Abrigo">
+        <img src="img/ropa/Pantalon.jpg" class="clothing-item" alt="Pantalón">
+        <img src="img/ropa/Zapatilla.jpg" class="clothing-item" alt="Zapatilla">
+        <img src="img/ropa/Mochila.jpg" class="clothing-item" alt="Mochila">
+        <img src="img/ropa/Sombrero.jpg" class="clothing-item" alt="Sombrero">
+      </div>
+    </div>
+    <div class="scroll-indicator">↓</div>
+  </section>
+
+  <section id="styles" class="styles-section">
+    <h2 class="section-title">Estilos según tu apariencia</h2>
+    <p class="section-subtitle">
+      Tu outfit ideal está a un escaneo de distancia. <br>
+      <span>Destaca sin esfuerzo.</span>
+    </p>
+
+    <div class="styles-grid">
+      <div class="style-card">
+        <img src="img/estilos/Hombre.png" alt="Estilo Hombre verano">
+        <h3>Verano Hombre</h3> </br>
+        <a href="estilos.html?tipo=hombre verano" class="style-btn">Ver estilo</a>
+      </div>
+
+      <div class="style-card">
+        <img src="img/estilos/Mujer.png" alt="Estilo Mujer verano">
+        <h3>Verano Mujer</h3> </br>
+        <a href="estilos.html?tipo=mujer verano" class="style-btn">Ver estilo</a>
+      </div>
+
+      <div class="style-card">
+        <img src="img/estilos/Hombre invierno.png" alt="Estilo Hombre invierno">
+        <h3>Invierno Hombre</h3> </br>
+        <a href="estilos.html?tipo=hombre invierno" class="style-btn">Ver estilo</a>
+      </div>
+
+      <div class="style-card">
+        <img src="img/estilos/Mujer invierno.png" alt="Estilo Mujer invierno">
+        <h3>Invierno Mujer</h3> </br>
+        <a href="estilos.html?tipo=Mujer invierno" class="style-btn">Ver estilo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="mission" class="mission-section">
+    <h2 class="section-title">Nuestra misión</h2>
+    <p class="section-subtitle">Creamos un puente entre la moda, la sostenibilidad y las personas.</p>
+
+    <div class="mission-container">
+      <div class="mission-card">
+        <h3>Conectamos personas con tiendas reales</h3>
+        <p>Brindamos acceso rápido a prendas de tiendas reconocidas como Saga, Ripley y muchas más, desde un solo lugar.
+        </p>
+      </div>
+
+      <div class="mission-card blue">
+        <h3>Impulsamos la moda sostenible</h3>
+        <p>Promovemos la donación, el reciclaje y la segunda vida de la ropa, reduciendo el impacto ambiental.</p>
+      </div>
+
+      <div class="mission-card">
+        <h3>Apoyamos el talento local</h3>
+        <p>Damos visibilidad a diseñadores y emprendedores para que crezcan junto con nuestra comunidad.</p>
+      </div>
+    </div>
+
+    <button class="mission-btn">Conoce más sobre nosotros</button>
+  </section>
+
+  <!-- ========= MODAL SOBRE NOSOTROS ========= -->
+  <div id="aboutModal" class="about-modal">
+    <div class="about-modal-content">
+
+      <span class="about-close">&times;</span>
+
+      <div class="about-left">
+        <img src="img/logo/App - Experiencia del usuario .png" alt="Sobre nosotros">
+      </div>
+
+      <div class="about-right">
+        <h2>Sobre nosotros</h2>
+        <p>
+          Help Me Clothes es una aplicación innovadora que utiliza tecnología de escaneo corporal para
+          crear un modelo digital del usuario y permitirle probarse virtualmente su propia ropa escaneada.
+        </p>
+        <p>
+          La app genera un armario virtual donde se pueden visualizar combinaciones y recibir recomendaciones
+          personalizadas sobre qué estilos y prendas se adaptan mejor a su cuerpo.
+        </p>
+        <p>
+          Además, sugiere ropa que el usuario no posee y muestra en qué tiendas puede adquirirla gracias a su
+          sistema de afiliación con comercios virtuales.
+        </p>
+        <p>
+          En futuras versiones, incluirá la opción de donar o vender prendas en desuso, fomentando la moda
+          sostenible y el consumo responsable.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+
+  <section id="stores" class="stores-section">
+    <h2 class="section-title">Tiendas asociadas</h2>
+    <p class="section-subtitle">Colaboramos con las principales marcas y tiendas del país para ofrecerte lo mejor de la
+      moda.</p>
+
+    <div class="partners-container">
+      <div class="partner-card">
+        <img src="img/tiendas/saga.png" alt="Saga Falabella">
+      </div>
+      <div class="partner-card">
+        <img src="img/tiendas/ripley.png" alt="Ripley">
+      </div>
+      <div class="partner-card">
+        <img src="img/tiendas/H&M.jpg" alt="H&M">
+      </div>
+      <div class="partner-card">
+        <img src="img/tiendas/zara.jpg" alt="Zara">
+      </div>
+      <div class="partner-card">
+        <img src="img/tiendas/platanitos.jpg" alt="Platanitos">
+      </div>
+    </div>
+  </section>
+  <section id="services" class="services-section">
+    <h2 class="section-title">Ofertas laborales</h2>
+    <p class="section-subtitle">Únete a nuestro equipo o trabaja con nuestras tiendas asociadas.</p>
+
+    <div class="jobs-container">
+      <div class="job-card">
+        <h3>Asesor de Ventas</h3>
+        <p class="company">Saga Falabella</p>
+        <p>Buscamos asesores de ventas con experiencia en atención al cliente y pasión por la moda.</p>
+        <button class="btn-apply" onclick="openApplyModal(
+          'Asesor de Ventas',
+          'Saga Falabella',
+          'Buscamos asesores de ventas con experiencia en atención al cliente y pasión por la moda.'
+          )">Postular</button>
+      </div>
+
+      <div class="job-card">
+        <h3>Community Manager</h3>
+        <p class="company">Help Me Clothes</p>
+        <p>Maneja nuestras redes sociales y ayuda a conectar a más usuarios con su estilo ideal.</p>
+        <button class="btn-apply" onclick="openApplyModal(
+          'Community Manager',
+          'Help Me Clothes',
+          'Maneja nuestras redes sociales y ayuda a conectar a más usuarios con su estilo ideal.'
+          )">Postular</button>
+      </div>
+
+      <div class="job-card">
+        <h3>Modelo Fotográfico</h3>
+        <p class="company">Ripley</p>
+        <p>Se requiere modelo para sesiones de catálogo de temporada. No se necesita experiencia previa.</p>
+        <button class="btn-apply" onclick="openApplyModal(
+          'Modelo Fotográfico',
+          'Ripley',
+          'Se requiere modelo para sesiones de catálogo. No se necesita experiencia previa.'
+          )">Postular</button>
+      </div>
+
+      <div class="job-card sell-clothes-card">
+        <h3>Vende tu ropa</h3>
+        <p class="company">Tú decides tu estilo y precio</p>
+        <p>¿Tienes ropa en buen estado que ya no usas? Súbela y véndela a nuestra comunidad de fashionistas.</p>
+        <button class="btn-sell" id="btnSellClothes">Ofrecer ropa</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MODAL OFRECER ROPA ===== -->
+  <div id="sellClothesModal" class="modal-donacion">
+    <div class="modal-donacion-content">
+      <span class="close-donacion" id="closeSellClothes">&times;</span>
+
+      <h2>¡Vende tu ropa!</h2>
+      <p>Completa el formulario para ofrecer tu ropa a nuestra comunidad:</p>
+
+      <form id="formSellClothes">
+        <input type="text" name="nombre" placeholder="Nombre de la prenda" required>
+        <input type="text" name="tipo" placeholder="Tipo de prenda (Ej: Camiseta, Pantalón)" required>
+        <input type="number" name="cantidad" placeholder="Cantidad" min="1" required>
+        <input type="number" name="precio" placeholder="Precio por unidad (S/)" min="1" required>
+        <button type="submit" class="btn-donar">Enviar</button>
+      </form>
+
+      <div id="mensajeSellExito" style="display:none; margin-top:10px; color:green; font-weight:bold;">
+        ¡Formulario enviado!
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal de Postulación -->
+  <div id="applyModal" class="modal">
+    <div class="modal-content">
+
+      <span class="close">&times;</span>
+
+      <h2 id="modalJobTitle"></h2>
+      <p class="modal-company" id="modalCompany"></p>
+
+      <form id="applyForm">
+        <input type="hidden" id="jobPosition" name="jobPosition">
+
+        <label>Tu nombre completo</label>
+        <input type="text" name="name" required>
+
+        <label>Correo electrónico</label>
+        <input type="email" name="email" required>
+
+        <label>Teléfono</label>
+        <input type="text" name="phone" required>
+
+        <label>Mensaje (opcional)</label>
+        <textarea name="message" rows="3"></textarea>
+
+        <label>Subir CV (PDF)</label>
+        <input type="file" name="cv" accept="application/pdf" required>
+
+        <button type="submit" class="send-apply-btn">Enviar Postulación</button>
+      </form>
+
+      <p id="successMessage" style="display:none; color:green; margin-top:10px;">
+        Tu postulación ha sido enviada. ¡Gracias!
+      </p>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("XlvlN3BtFfXtMy7dv");
+    })();
+  </script>
+
+
+  <section id="reviews" class="reviews-section">
+    <h2 class="section-title">Opiniones de nuestros usuarios</h2>
+    <p class="section-subtitle">Descubre lo que dicen quienes ya usan Help Me Clothes.</p>
+
+    <div class="reviews-container">
+      <div class="review-card">
+        <img src="img/usuarios/mujer1.png" alt="Usuario 1" class="user-photo">
+        <h3>María López</h3>
+        <div class="stars">★★★★★</div>
+        <p>Me encanta la facilidad para encontrar ropa de mi estilo. La interfaz es súper intuitiva y moderna.</p>
+      </div>
+
+      <div class="review-card">
+        <img src="img/usuarios/hombre1.png" alt="Usuario 2" class="user-photo">
+        <h3>Jorge Ramírez</h3>
+        <div class="stars">★★★★☆</div>
+        <p>Muy buena idea. Sería genial si añadieran más tiendas locales. Aun así, la experiencia es excelente.</p>
+      </div>
+
+      <div class="review-card">
+        <img src="img/usuarios/mujer2.png" alt="Usuario 3" class="user-photo">
+        <h3>Valentina Torres</h3>
+        <div class="stars">★★★★★</div>
+        <p>Me ayudó a conectar con una tienda cerca de mi zona. ¡Rápido y confiable!</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Help Me Clothes</h3>
+        <p>Conectamos personas con tiendas de moda para hacer tu estilo más accesible y sostenible.</p>
+      </div>
+
+      <div class="footer-support">
+        <h4>Atención al cliente</h4>
+        <ul>
+          <li><a href="#" id="btnReclamos">Quejas y reclamos</a></li>
+          <li><a href="devoluciones.html">Política de devoluciones</a></li>
+          <li><a href="#" id="btndonaciones">Donaciones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contáctanos</h4>
+        <a href="https://giromisantos22@gmail.com" target="_blank">giromisantos22@gmail.com</a>
+        <p>Lima, Perú</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/share/17c6nsauMv/" target="_blank"><img src="img/redes/facebook.svg"
+              alt="Facebook"></a>
+          <a href="https://www.instagram.com/help.meclothes?igsh=YnZsdjJrZjdudTl5" target="_blank"><img
+              src="img/redes/instagram.svg" alt="Instagram"></a>
+          <a href="https://wa.me/51939129231" target="_blank">
+            <img src="img/redes/whatsapp.svg" alt="WhatsApp">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Help Me Clothes | Gracias por ser parte de nuestra comunidad</p>
+    </div>
+  </footer>
+
+  <!-- =========================
+        POPUP DE PROMOCIÓN
+========================= -->
+  <div id="promoPopup" class="promo-overlay">
+    <div class="promo-box">
+
+      <button class="promo-close" onclick="closePromo()">&times;</button>
+
+      <div class="promo-carousel">
+        <div class="slides">
+          <img src="img/oferta/oferta1.png" class="slide">
+          <img src="img/oferta/oferta2.png" class="slide">
+          <img src="img/oferta/oferta3.png" class="slide">
+        </div>
+
+        <div class="indicators">
+          <span class="dot active" onclick="goToSlide(0)"></span>
+          <span class="dot" onclick="goToSlide(1)"></span>
+          <span class="dot" onclick="goToSlide(2)"></span>
+        </div>
+      </div>
+
+      <p class="promo-text">
+        Aprovecha descuentos exclusivos en toda la tienda por tiempo limitado.
+      </p>
+
+      <button class="promo-btn" onclick="goToOffers()">
+        Ver Ofertas
+      </button>
+
+    </div>
+  </div>
+
+  <!-- ===== MODAL QUEJAS Y RECLAMOS ===== -->
+  <div id="reclamoModal" class="modal-reclamo">
+    <div class="modal-reclamo-content">
+
+      <span class="close-reclamo">&times;</span>
+
+      <h2>Libro de Reclamaciones</h2>
+      <p>Complete la información para registrar su queja o reclamo.</p>
+
+      <form id="reclamoForm">
+        <label>Nombre completo</label>
+        <input type="text" id="nombre" required>
+
+        <label>Correo electrónico</label>
+        <input type="email" id="correo" required>
+
+        <label>Teléfono</label>
+        <input type="tel" id="rTelefono" required>
+
+        <label>Tipo:</label>
+        <select id="tipo">
+          <option value="Queja">Queja</option>
+          <option value="Reclamo">Reclamo</option>
+        </select>
+
+        <label>Descripción</label>
+        <textarea id="description" required></textarea>
+
+        <button type="submit" class="btn-send-reclamo">Enviar</button>
+      </form>
+
+      <div id="reclamoExito" class="reclamo-exito">
+        ¡Su solicitud fue enviada correctamente!
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== MODAL POLÍTICA DE DEVOLUCIONES ===== -->
+  <div id="devolucionModal" class="modal-devolucion">
+    <div class="modal-devolucion-content">
+
+      <span class="close-devolucion">&times;</span>
+
+      <h2>Política de Devoluciones</h2>
+
+      <div class="devolucion-text">
+        <p><strong>Cambios y devoluciones</strong></p>
+        <p>Los clientes podrán solicitar cambios o devoluciones dentro de los primeros <strong>7 días hábiles</strong>
+          después de recibir el producto.</p>
+
+        <p><strong>Condiciones:</strong></p>
+        <ul>
+          <li>El producto debe estar en buen estado y sin señales de uso.</li>
+          <li>Debe conservar etiquetas, empaques y accesorios originales.</li>
+          <li>No aplican devoluciones en productos usados, dañados o personalizados.</li>
+        </ul>
+
+        <p><strong>Proceso de devolución:</strong></p>
+        <ul>
+          <li>Contactar a Atención al Cliente mediante nuestro correo.</li>
+          <li>Enviar evidencia (fotos o video) del estado del producto.</li>
+          <li>Una vez aprobada la solicitud, se coordina el recojo o entrega.</li>
+        </ul>
+
+        <p><strong>Reembolsos:</strong></p>
+        <p>El reembolso se realizará por el mismo método de pago utilizado en un plazo máximo de <strong>10 días
+            hábiles</strong>.</p>
+
+        <p>Para más información, puede comunicarse con nuestro equipo de soporte.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== MODAL DONACIONES ===== -->
+  <div id="donacionModal" class="modal-donacion">
+    <div class="modal-donacion-content">
+
+      <span class="close-donacion">&times;</span>
+
+      <h2>¡Dona ropa y ayuda a quienes lo necesitan!</h2>
+      <p>Completa el formulario para coordinar tu donación:</p>
+
+      <form id="formDonacionRopa">
+        <input type="text" name="nombre" placeholder="Nombre Completo" required>
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <input type="text" name="tipo" placeholder="Tipo de prenda (Ej: Camiseta, Pantalón)" required>
+        <input type="number" name="cantidad" placeholder="Cantidad" min="1" required>
+        <button type="submit" class="btn-donar">Enviar donación</button>
+      </form>
+
+      <div id="mensajeexito" style="display:none;">
+        ¡Correo enviado!
+      </div>
+
+    </div>
+  </div>
+
+
+  <script>
+    function showPromo() {
+      document.getElementById("promoPopup").style.display = "flex";
+    }
+
+    function closePromo() {
+      document.getElementById("promoPopup").style.display = "none";
+
+      // Guardar la fecha del día
+      const today = new Date().toISOString().slice(0, 10);
+      localStorage.setItem("promoShown", today);
+    }
+
+    function goToOffers() {
+      window.location.href = "estilos.html?tipo=ofertas";
+    }
+
+    window.onload = () => {
+      showPromo();
+    };
+  </script>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelector(".slides");
+    const dots = document.querySelectorAll(".dot");
+    const totalSlides = 3;
+
+    function showSlide(index) {
+      currentSlide = index;
+      slides.style.transform = `translateX(-${index * 33.5}%)`;
+
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[index].classList.add("active");
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      showSlide(currentSlide);
+    }
+
+    function goToSlide(n) {
+      showSlide(n);
+    }
+
+    setInterval(nextSlide, 4000);
+  </script>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

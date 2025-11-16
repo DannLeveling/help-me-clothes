@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estilos - Help Me Clothes</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <header id="header">
+    <nav>
+      <div class="logo">
+        <img src="img/logo/App - Experiencia del usuario .png" class="logo-img" alt="Tienda">
+        <span>HELP ME CLOTHES</span>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"><img src="img/iconos/inicio.svg" class="icono-nav"> <span>Inicio</span></a></li>
+        <li><a href="estilos.html"><img src="img/iconos/estilos.svg" class="icono-nav"> <span>Estilos</span></a></li>
+        <li><a href="index.html#mission"><img src="img/iconos/mision.svg" class="icono-nav"> <span>Misión</span></a>
+        </li>
+        <li><a href="index.html#services"><img src="img/iconos/servicios.svg" class="icono-nav">
+            <span>Servicios</span></a></li>
+        <li><a href="index.html#stores"><img src="img/iconos/shop-window.svg" class="icono-nav">
+            <span>Tiendas</span></a></li>
+        <li><a href="closet.html"><img src="img/iconos/closet.svg" alt="Closet"
+              class="icono-nav"><span>Closet</span></a></li>
+        <li class="user-menu">
+          <a id="userBtn" href="login.html">
+            <img src="img/iconos/login.svg" alt="Usuario" class="icono-nav">
+            <span>Usuario</span>
+          </a>
+          <ul id="userDropdown" class="user-dropdown">
+            <li onclick="logout()">Cerrar sesión</li>
+          </ul>
+        </li>
+      </ul>
+
+      <button class="cart-btn" onclick="goToCart()">
+        <img src="img/iconos/carrito.svg" alt="Carrito" class="icono-cart">
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+
+
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </nav>
+  </header>
+
+
+  <nav class="category-nav">
+    <button class="category-btn" data-category="hombre verano">Hombre verano</button>
+    <button class="category-btn" data-category="hombre invierno">Hombre invierno</button>
+    <button class="category-btn" data-category="mujer verano">Mujer verano</button>
+    <button class="category-btn" data-category="mujer invierno">Mujer invierno</button>
+  </nav>
+
+  <section id="productContainer" class="products-grid">
+
+  </section>
+
+  <!-- ===== MODAL DE PRODUCTO ===== -->
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+
+      <span class="close-btn">&times;</span>
+
+      <div class="modal-left">
+        <img id="modal-product-image" src="" alt="Producto">
+
+        <div class="color-selector">
+          <span class="color-box" style="background:#e573a3;"></span>
+          <span class="color-box" style="background:#b48cd8;"></span>
+          <span class="color-box" style="background:#7bbce7;"></span>
+          <span class="color-box" style="background:#000000;"></span>
+        </div>
+      </div>
+
+      <div class="modal-right">
+        <h2 id="modal-product-title">Nombre del producto</h2>
+        <p id="modal-product-price" class="modal-price">S/ 00.00</p>
+
+        <div class="size-section">
+          <h3>Tallas</h3>
+          <div class="sizes">
+            <button class="size-btn">S</button>
+            <button class="size-btn">M</button>
+            <button class="size-btn">L</button>
+            <button class="size-btn">XL</button>
+          </div>
+        </div>
+
+        <div class="quantity-section">
+          <h3>Cantidad</h3>
+          <div class="quantity-box">
+            <button class="qty-btn" id="qty-minus">-</button>
+            <span id="qty-number">1</span>
+            <button class="qty-btn" id="qty-plus">+</button>
+          </div>
+        </div>
+
+        <button id="addToCartBtn" class="add-cart-btn">Agregar al carrito</button>
+
+        <div class="reviews-section">
+          <h3>Reseñas</h3>
+
+          <ul id="reviewList" class="review-list"></ul>
+
+          <h4>Tu valoración</h4>
+
+          <div id="starRating" class="star-rating">
+            <span data-star="1">★</span>
+            <span data-star="2">★</span>
+            <span data-star="3">★</span>
+            <span data-star="4">★</span>
+            <span data-star="5">★</span>
+          </div>
+
+          <textarea id="newReview" placeholder="Escribe tu reseña aquí..."></textarea>
+
+          <button id="addReviewBtn" class="add-review-btn">Enviar reseña</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div id="toast" class="toast">Producto agregado al carrito</div>
+  <script src="js/estilos.js"></script>
+</body>
+
+</html>
